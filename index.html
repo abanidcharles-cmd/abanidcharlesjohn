@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AniREPORT – Every Report Saves a Life</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- SIDEBAR OVERLAY -->
+<div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<!-- ======== SIDEBAR ======== -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="sidebar-logo">
+      <!-- Paw icon SVG -->
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="20" cy="12" rx="6" ry="8" fill="#8B1A1A"/>
+        <ellipse cx="44" cy="12" rx="6" ry="8" fill="#8B1A1A"/>
+        <ellipse cx="10" cy="28" rx="5" ry="7" fill="#8B1A1A"/>
+        <ellipse cx="54" cy="28" rx="5" ry="7" fill="#8B1A1A"/>
+        <ellipse cx="32" cy="40" rx="18" ry="16" fill="#8B1A1A"/>
+      </svg>
+    </div>
+    <span class="sidebar-title">AniREPORT</span>
+    <span class="sidebar-tagline">Every Report Saves a Life</span>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a href="#home"     class="nav-item active"  onclick="setActive(this)"><span class="nav-icon">🏠</span> Home</a>
+    <a href="#report"   class="nav-item"          onclick="setActive(this)"><span class="nav-icon">📋</span> Report</a>
+    <a href="#notif"    class="nav-item"          onclick="setActive(this)"><span class="nav-icon">🔔</span> Notification</a>
+    <a href="#adoption" class="nav-item"          onclick="setActive(this)"><span class="nav-icon">🐾</span> Adoption</a>
+    <a href="#animals"  class="nav-item"          onclick="setActive(this)"><span class="nav-icon">🐕</span> Animals</a>
+  </nav>
+
+  <button class="sidebar-logout">
+    <span>🚪</span> Log Out
+  </button>
+</div>
+
+<!-- ======== MAIN CONTENT ======== -->
+<div class="main-content">
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <span class="topbar-title">Welcome back, Charles 👋</span>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-notif">
+        🔔
+        <div class="notif-badge">3</div>
+      </div>
+      <div class="topbar-avatar">CJ</div>
+    </div>
+  </header>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="home">
+    <div class="hero-text reveal">
+      <div class="hero-eyebrow">Animal Welfare Platform</div>
+      <h1 class="hero-headline">Every Report<br><span>Saves a Life.</span></h1>
+      <p class="hero-sub">Report abandoned and injured animals in your area. Together, we can make a difference — one report at a time.</p>
+      <div class="hero-cta-group">
+        <a href="#report"><button class="btn-primary">📋 Submit a Report</button></a>
+        <a href="#adoption"><button class="btn-outline">🐾 Browse Adoptions</button></a>
+      </div>
+    </div>
+    <div class="hero-image-col reveal">
+      <div class="hero-img-wrap">
+        <div class="hero-img-icon">🐕🐈</div>
+        <div class="hero-img-caption">Rescue · Shelter · Adopt</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar reveal">
+    <div class="stat-item">
+      <div class="stat-num">10,000+</div>
+      <div class="stat-label">Pets Adopted</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100+</div>
+      <div class="stat-label">Shelters Partnered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5,000+</div>
+      <div class="stat-label">Pet Lovers</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">2,400+</div>
+      <div class="stat-label">Reports Filed</div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section how-section" id="how">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">How it works</div>
+      <h2 class="section-title">Simple Steps to Make a Difference</h2>
+      <p class="section-sub">Reporting a stray or injured animal is quick and easy. Follow these steps to help an animal in need.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <div class="step-icon">📋</div>
+        <div class="step-title">Report</div>
+        <div class="step-desc">Submit a report of an abandoned or injured animal with photo and location details.</div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <div class="step-icon">📍</div>
+        <div class="step-title">Location</div>
+        <div class="step-desc">We track the animal's location in real-time so responders know exactly where to go.</div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <div class="step-icon">🔔</div>
+        <div class="step-title">Notify</div>
+        <div class="step-desc">Nearby volunteers and shelter partners are instantly notified to coordinate rescue.</div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">4</div>
+        <div class="step-icon">🏠</div>
+        <div class="step-title">Connect</div>
+        <div class="step-desc">Rescued animals are matched with loving adopters through our adoption network.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- FEATURES -->
+  <section class="section features-section" id="features">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Features</div>
+      <h2 class="section-title">Everything You Need to Help</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap fi-green">📋</div>
+        <div class="feature-title">Incident Reporting</div>
+        <div class="feature-desc">File detailed reports with photos, description, and GPS coordinates in seconds.</div>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap fi-orange">🔔</div>
+        <div class="feature-title">Real-Time Alerts</div>
+        <div class="feature-desc">Get notified when your report is received, assigned, and resolved by a responder.</div>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap fi-blue">🐾</div>
+        <div class="feature-title">Adoption Center</div>
+        <div class="feature-desc">Browse adoptable animals from partner shelters and rescue organizations nearby.</div>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap fi-red">📍</div>
+        <div class="feature-title">Location Tracking</div>
+        <div class="feature-desc">Map-based reporting helps rescuers find animals quickly in your area.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANIMAL CATEGORIES -->
+  <section class="section animals-section" id="animals">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Browse by Animal</div>
+      <h2 class="section-title">All Animal Categories</h2>
+      <p class="section-sub">Filter reports and adoptions by the type of animal you want to help or adopt.</p>
+    </div>
+    <div class="animals-grid">
+      <div class="animal-card reveal"><div class="animal-emoji">🐱</div><div class="animal-name">Cat</div><div class="animal-count">142 listings</div></div>
+      <div class="animal-card reveal"><div class="animal-emoji">🐶</div><div class="animal-name">Dog</div><div class="animal-count">318 listings</div></div>
+      <div class="animal-card reveal"><div class="animal-emoji">🐦</div><div class="animal-name">Bird</div><div class="animal-count">67 listings</div></div>
+      <div class="animal-card reveal"><div class="animal-emoji">🐇</div><div class="animal-name">Rabbit</div><div class="animal-count">53 listings</div></div>
+      <div class="animal-card reveal"><div class="animal-emoji">🐟</div><div class="animal-name">Fish</div><div class="animal-count">29 listings</div></div>
+      <div class="animal-card reveal"><div class="animal-emoji">🐍</div><div class="animal-name">Snake</div><div class="animal-count">14 listings</div></div>
+      <div class="animal-card reveal"><div class="animal-emoji">🦎</div><div class="animal-name">Lizard</div><div class="animal-count">11 listings</div></div>
+      <div class="animal-card reveal"><div class="animal-emoji">🐹</div><div class="animal-name">Hamster</div><div class="animal-count">38 listings</div></div>
+      <div class="animal-card reveal"><div class="animal-emoji">🐐</div><div class="animal-name">Goat</div><div class="animal-count">9 listings</div></div>
+    </div>
+  </section>
+
+  <!-- ADOPTION SECTION -->
+  <section class="section adoption-section" id="adoption">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Adopt a Friend</div>
+      <h2 class="section-title">Animals Looking for a Home</h2>
+      <p class="section-sub">Give a rescued animal a loving forever home. Every adoption changes two lives.</p>
+    </div>
+    <div class="adoption-grid">
+      <div class="adopt-card reveal">
+        <span class="adopt-badge">Available</span>
+        <div class="adopt-animal">🐶</div>
+        <div class="adopt-name">Buddy</div>
+        <div class="adopt-info">Golden Retriever · 2 years · Male<br>Cebu City Shelter</div>
+        <button class="btn-adopt">Adopt Buddy</button>
+      </div>
+      <div class="adopt-card reveal">
+        <span class="adopt-badge">Available</span>
+        <div class="adopt-animal">🐱</div>
+        <div class="adopt-name">Luna</div>
+        <div class="adopt-info">Domestic Shorthair · 1 year · Female<br>PAWS Shelter Cebu</div>
+        <button class="btn-adopt">Adopt Luna</button>
+      </div>
+      <div class="adopt-card reveal">
+        <span class="adopt-badge">Available</span>
+        <div class="adopt-animal">🐇</div>
+        <div class="adopt-name">Cottontail</div>
+        <div class="adopt-info">Holland Lop · 8 months · Male<br>Happy Paws Rescue</div>
+        <button class="btn-adopt">Adopt Cottontail</button>
+      </div>
+      <div class="adopt-card reveal">
+        <span class="adopt-badge">Available</span>
+        <div class="adopt-animal">🐦</div>
+        <div class="adopt-name">Tweety</div>
+        <div class="adopt-info">Parakeet · 3 years · Female<br>Wings & Things Rescue</div>
+        <button class="btn-adopt">Adopt Tweety</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORT FORM SECTION -->
+  <section class="section report-section" id="report">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Submit a Report</div>
+      <h2 class="section-title">Spotted an Animal in Need?</h2>
+      <p class="section-sub">Fill out the form below and our network of rescuers will respond as quickly as possible.</p>
+    </div>
+    <div class="report-form-wrap reveal">
+      <div class="form-two">
+        <div class="form-row">
+          <label class="form-label">Your Full Name</label>
+          <input type="text" class="form-input" placeholder="e.g. Charles John Aberid" />
+        </div>
+        <div class="form-row">
+          <label class="form-label">Contact Number</label>
+          <input type="tel" class="form-input" placeholder="+63 912 345 6789" />
+        </div>
+      </div>
+      <div class="form-two">
+        <div class="form-row">
+          <label class="form-label">Animal Type</label>
+          <select class="form-select">
+            <option value="">Select animal type</option>
+            <option>Dog</option>
+            <option>Cat</option>
+            <option>Bird</option>
+            <option>Rabbit</option>
+            <option>Fish</option>
+            <option>Snake</option>
+            <option>Lizard</option>
+            <option>Hamster</option>
+            <option>Goat</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label class="form-label">Condition</label>
+          <select class="form-select">
+            <option value="">Select condition</option>
+            <option>Abandoned / Stray</option>
+            <option>Injured</option>
+            <option>Sick</option>
+            <option>Lost Pet</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <label class="form-label">Location / Address</label>
+        <input type="text" class="form-input" placeholder="e.g. Lahug, Cebu City" />
+      </div>
+      <div class="form-row">
+        <label class="form-label">Description</label>
+        <textarea class="form-textarea" placeholder="Describe what you saw — appearance, behaviour, urgency..."></textarea>
+      </div>
+      <button class="btn-submit">📋 Submit Report</button>
+    </div>
+  </section>
+
+  <!-- NOTIFICATIONS -->
+  <section class="section notif-section" id="notif">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Notifications</div>
+      <h2 class="section-title">Your Recent Updates</h2>
+    </div>
+    <div class="notif-list">
+      <div class="notif-item unread reveal">
+        <div class="notif-icon">📋</div>
+        <div class="notif-body">
+          <div class="notif-title">Your report has been received</div>
+          <div class="notif-desc">Report #2041 for an injured dog in Lahug has been logged and assigned to a rescue team.</div>
+          <div class="notif-time">Just now</div>
+        </div>
+        <div class="notif-dot"></div>
+      </div>
+      <div class="notif-item unread reveal">
+        <div class="notif-icon">🐾</div>
+        <div class="notif-body">
+          <div class="notif-title">New adoption match found</div>
+          <div class="notif-desc">Buddy the Golden Retriever is a great match based on your preferences. View his profile today!</div>
+          <div class="notif-time">2 hours ago</div>
+        </div>
+        <div class="notif-dot"></div>
+      </div>
+      <div class="notif-item reveal">
+        <div class="notif-icon">✅</div>
+        <div class="notif-body">
+          <div class="notif-title">Report #2035 resolved</div>
+          <div class="notif-desc">The stray cat you reported in Mabolo has been safely transported to PAWS Cebu. Thank you!</div>
+          <div class="notif-time">Yesterday</div>
+        </div>
+      </div>
+      <div class="notif-item reveal">
+        <div class="notif-icon">🔔</div>
+        <div class="notif-body">
+          <div class="notif-title">Community alert near you</div>
+          <div class="notif-desc">A new report of 3 stray dogs was filed 500m from your location in IT Park area.</div>
+          <div class="notif-time">2 days ago</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner reveal">
+    <h2>You Can Make a Difference</h2>
+    <p>Be a hero for animals. Your actions today can save lives. Join thousands of pet lovers making an impact.</p>
+    <div class="cta-banner-btns">
+      <a href="#report"><button class="btn-primary">Submit a Report</button></a>
+      <a href="#adoption"><button class="btn-outline">Become a Volunteer</button></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="sidebar-title">AniREPORT</span>
+        <p>A platform dedicated to rescuing, sheltering, and rehoming animals in need across the Philippines. Together, we save lives — one report at a time.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#report">Report Animal</a></li>
+          <li><a href="#adoption">Adoption</a></li>
+          <li><a href="#notif">Notifications</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Animals</h4>
+        <ul>
+          <li><a href="#animals">Dogs</a></li>
+          <li><a href="#animals">Cats</a></li>
+          <li><a href="#animals">Birds</a></li>
+          <li><a href="#animals">Other Animals</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">Email Us</a></li>
+          <li><a href="#">Rate the App</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 AniREPORT. All rights reserved. Made with ❤️ for animals.</p>
+      <div class="footer-social">
+        <div class="social-btn">🐦</div>
+        <div class="social-btn">📘</div>
+        <div class="social-btn">📸</div>
+        <div class="social-btn">▶️</div>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- end main-content -->
+
+<script>
+  /* ===== SIDEBAR TOGGLE ===== */
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('overlay').classList.toggle('open');
+  }
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+  }
+
+  /* ===== ACTIVE NAV ITEM ===== */
+  function setActive(el) {
+    document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+    el.classList.add('active');
+    if (window.innerWidth <= 900) closeSidebar();
+  }
+
+  /* ===== SCROLL REVEAL ===== */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  /* ===== ACTIVE NAV ON SCROLL ===== */
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-item');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(l => {
+      l.classList.remove('active');
+      if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
